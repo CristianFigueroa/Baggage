@@ -1,13 +1,12 @@
+
 public class Baggage {
 
     public Baggage(int n){
-        //System.out.println("------------------------------------------------------");
         ordenar(n,0);
     }
 
 
     private void ordenar(int n, int desface){
-        System.out.println("DESFACE :"+desface);
         if (n == 3) {
             System.out.println("2 to -1");
             System.out.println("5 to 2");
@@ -51,9 +50,7 @@ public class Baggage {
         } else {
             System.out.println((2*n - 2 + desface) + " to " + (-1 + desface));
             System.out.println(3 + desface + " to " + (2*n - 2 + desface));
-            System.out.println("------------------------------------------------------");
             ordenar(n - 4, 4 + desface);
-            System.out.println("------------------------------------------------------");
             System.out.println((0 + desface) + " to " + (2*n - 5 + desface));
             System.out.println((2*n - 1 + desface) + " to " + (0  + desface));
 
