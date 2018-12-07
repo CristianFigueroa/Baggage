@@ -1,6 +1,6 @@
 package proyecto;
 
-public class Baggage {
+class Baggage {
 
     private String resultado;
 
@@ -9,17 +9,21 @@ public class Baggage {
         this.ordenar(n,0);
     }
 
-    public String getResultado() {
+    public String getResultado(){
         return this.resultado;
     }
 
+    public void setResultado(){
+        this.resultado="";
+    }
 
-    private void ordenar(int n, int desface){
+    public void ordenar(int n, int desface){
         if (n == 3) {
             this.resultado +=
                     ("2 to -1") + "\n" +
                     ("5 to 2") + "\n" +
                     ("3 to -3") + "\n" ;
+
 
         } else if (n == 4) {
             this.resultado +=
@@ -62,16 +66,12 @@ public class Baggage {
         } else {
             this.resultado +=
                     ((2*n - 2 + desface) + " to " + (-1 + desface)) + "\n" +
-                    (3 + desface + " to " + (2*n - 2 + desface)) + "\n" ;
-
+                    ((3 + desface) + " to " + (2*n - 2 + desface)) + "\n" ;
             ordenar(n - 4, 4 + desface);
-
             this.resultado +=
                     ((0 + desface) + " to " + (2*n - 5 + desface)) + "\n" +
                     ((2*n - 1 + desface) + " to " + (0  + desface)) + "\n" ;
 
         }
     }
-
-
 }
