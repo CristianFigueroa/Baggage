@@ -4,7 +4,7 @@ public class BaggageTest {
 
     @org.junit.Test
     public void ordenar() {
-        Baggage b = new Baggage(110);
+        Baggage b = new Baggage(8);
         assertEquals("a", "a");
     }
 }
