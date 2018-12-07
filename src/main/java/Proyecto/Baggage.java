@@ -1,3 +1,4 @@
+package Proyecto;
 
 public class Baggage {
 
@@ -6,7 +7,10 @@ public class Baggage {
     public Baggage(int n){
         this.resultado = "";
         this.ordenar(n,0);
-        System.out.println(resultado);
+    }
+
+    public String getResultado() {
+        return this.resultado;
     }
 
 
